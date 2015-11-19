@@ -14,6 +14,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'slim-rails'
 
+gem 'carrierwave'
+gem 'mini_magick'
+
 group :development, :test do
   gem 'pry'
   gem 'byebug'
