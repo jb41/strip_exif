@@ -9,3 +9,7 @@ p
         | without EXIF data
 
 =render 'strip_exif_js'
+=render 'strip_exif_backend'
+
+=content_for :javascript_includes do
+  = javascript_include_tag 'cleaner.js'
