@@ -7,10 +7,8 @@ $ ->
   cx = c.getContext('2d')
   str = ''
   i = 0
-  app = document.querySelector('#app')
 
   getfile = (e) ->
-    document.body.classList.remove 'dragdrop'
     i = 0
     file = if e.dataTransfer then e.dataTransfer.files[0] else e.target.files[0]
     EXIF.getData file, ->
@@ -24,13 +22,11 @@ $ ->
 
           reader.onload = (ev) ->
             loadImage ev.target.result, file.name
-            return
 
       else
         output.innerHTML = 'Image is already clean!'
-      return
+
     e.preventDefault()
-    return
 
   loadImage = (file, name) ->
     img = new Image
@@ -38,9 +34,6 @@ $ ->
 
     img.onload = ->
       imagetocanvas this, img.naturalWidth, img.naturalHeight, name
-      return
-
-    return
 
   imagetocanvas = (img, w, h, name) ->
     c.width = w
