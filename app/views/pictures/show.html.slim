@@ -1,0 +1,10 @@
+=link_to '< Go to homepage', root_path
+
+h3
+  | Picture without EXIF data
+
+a(
+  href=@picture.file.stripped.url
+  download=@picture.stripped_file_name
+)
+  | Download picture

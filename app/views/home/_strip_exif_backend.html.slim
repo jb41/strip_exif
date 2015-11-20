@@ -1,0 +1,7 @@
+h3
+  | Removing EXIF data from image using Ruby
+
+=form_for @picture, html: { multipart: true } do |f|
+  =f.file_field :file
+  br
+  =f.submit 'Remove EXIF'
